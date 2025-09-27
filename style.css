@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 200;
+    color: #75A47F;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #75A47F;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+}
+
+.main-container {
+    width: 500px;   /* adjust size */
+    height: 600px;  /* same as width → square */
+    /* border: 2px solid red; */
+    border-radius: 16px;
+    background: #FCFFE0;     /* app background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* spread sections */
+    align-items: center;
+    padding: 20px; 
+    z-index: 1;
+}
+
+.image-container {
+    padding-top: 15px;
+    border-radius: 10px;
+    /* border: 3px solid green; */
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image container */
+.image-container img {
+    padding: 20px 20px 0px 20px;
+    max-width: 50%;       /* shrink if too wide */
+    height: auto;          /* keep proportions */
+    /* border: 3px solid red;  */
+    border-radius: 10px;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    font-size: xx-large;
+}
+
+.timer-text {
+    font-size: xx-large;
+    padding: 12px;
+}
+
+button {
+    font-size: large;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border-color: #75A47F;
+    border-width: 3px;
+    border-style: solid;
+    background-color: #BACD92;
+    color: #FCFFE0;
+    opacity: 1;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #A3C16C;
+}
+
+.set-timer-fields {
+    gap: 8px;
+    font-size: large;
+    font-weight: 500;
+}
+
+.set-timer-fields label { 
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.set-timer-fields input {
+    font-size: large;
+    width: 120px;
+    padding: 4px 12px;
+    border: 2px solid #75A47F;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 0 0;
+}
+
+.set-timer-fields input:focus {
+    outline: 1.5px solid #5E8666;
+}
+
+.timer-controls,
+.timer-on {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; 
+    width: 100%;
+    /* border: 3px solid red; */
+}
+
+.timer-done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* keep centered */
+    gap: 20px;  /* space between title and buttons */
+    width: 100%;
+    height: 100%;
+}
+
+.done-label {
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.done-buttons {
+    display: flex;
+    gap: 12px; /* spacing between restart + back buttons */
+}

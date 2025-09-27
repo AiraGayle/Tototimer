@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tototimer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Background music -->
+    <audio id="bg-music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Alarm sound -->
+    <audio id="alarm-sound" loop>
+    <source src="assets/alarm.mp3" type="audio/mpeg">
+    </audio>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="main-container">
+        <header class="image-container">
+            <h2 class="name">Totoro wants to take a nap</h2>
+            <img src="assets/Totoro.PNG" alt="Totoro Image"/>
+        </header>
+        <section class="timer-controls">
+            <div class="timer-display">
+                <h2 class="timer-text">
+                    <span class="hours">00</span><span class="colon" id="h-colon"> :</span>
+                    <span class="minutes">00</span><span class="colon" id="m-colon"> :</span>
+                    <span class="seconds">00</span>
+                </h2>
+            </div>
+            <div class="set-timer-container">
+                <button class="set-timer-btn">Change Time</button>
+            </div>
+            <div class="start-timer-container">
+                <button class="start-timer-btn">Start</button>
+            </div>
+        </section>
+        <section class="set-timer-section" style="display: none;">
+            <div class="set-timer-fields">
+                <label>
+                    Hours:
+                    <input type="number" id="hours-input" min="0" value="0">
+                </label>
+                <label>
+                    Minutes:
+                    <input type="number" id="minutes-input" min="0" max="59" value="0">
+                </label>
+                <label>
+                    Seconds:
+                    <input type="number" id="seconds-input" min="0" max="59" value="0">
+                </label>
+                <button class="set-time-confirm">Set</button>
+                <button class="set-time-cancel">Cancel</button>
+            </div>
+        </section>
+        <section class="timer-on" style="display: none">
+            <div class="timer-display">
+                <h2 class="timer-text">
+                    <span class="hours">00</span><span class="colon" id="h-colon"> :</span>
+                    <span class="minutes">00</span><span class="colon" id="m-colon"> :</span>
+                    <span class="seconds">00</span>
+                </h2>
+            </div>
+            <div class="pause-timer-container">
+                <button class="pause-timer-btn">Pause</button>
+            </div>
+            <div class="stop-timer-container">
+                <button class="stop-timer-btn">Stop</button>
+            </div>
+        </section>
+        <section class="timer-done" style="display: none">
+            <h2 class="done-label">Beep beep! Time to wake up!</h2>
+            <div class="done-buttons">
+                <button class="restart-timer-btn">Restart Timer</button>
+                <button class="back-btn">Back</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
